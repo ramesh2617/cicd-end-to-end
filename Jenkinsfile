@@ -55,10 +55,11 @@ pipeline {
                         cat deploy.yaml
                         sed -i  's/20/${BUILD_NUMBER}/g' deploy.yaml
                         cat deploy.yaml
+                        git init
                         git add deploy.yaml
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
                         git remote -v
-                        git push -u -f origin https://github.com/ramesh2617/cicd-end-to-end.git HEAD:main
+                        git push -u origin main https://github.com/ramesh2617/cicd-end-to-end.git
                         '''                        
                     }
                 }
