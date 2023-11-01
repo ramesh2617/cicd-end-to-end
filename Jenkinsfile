@@ -33,8 +33,7 @@ pipeline {
                     sh '''
                     echo 'Push to Repo'
                     docker login -u mahiramesh2617 -p Mahi@2617
-                    docker tag mylocalimage mahiramesh2617/myargo:myfirstimage
-                    docker push mahiramesh2617/myargo:${BUILD_NUMBER}
+                    docker push abhishekf5/cicd-e2e:${BUILD_NUMBER}
                     '''
                 }
             }
