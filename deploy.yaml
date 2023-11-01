@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todo
-        image: mahiramesh2617/myargo:20
+        image: mahiramesh2617/todo-app:20
         ports:
         - containerPort: 8000
