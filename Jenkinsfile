@@ -32,8 +32,8 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker login -u mahiramesh2617 -p Mahi@2617
                     docker push abhishekf5/cicd-e2e:${BUILD_NUMBER}
+                    docker login -u mahiramesh2617 -p Mahi@2617
                     '''
                 }
             }
