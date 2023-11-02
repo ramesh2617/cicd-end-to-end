@@ -52,6 +52,7 @@ pipeline {
         environment {
             GIT_REPO_NAME = "cicd-end-to-end"
             GIT_USER_NAME = "ramesh2617"
+            GITHUB_TOKEN = "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"
              }
         steps {
             withCredentials([string(credentialsId: '3717e5e0-d3d1-47a2-8dd3-72b98ec840d6', variable: 'GITHUB_TOKEN')]) {
