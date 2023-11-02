@@ -48,11 +48,10 @@ pipeline {
         }
         
         stage('Update K8S manifest & push to Repo'){
-            steps {
-                 environment {
+        environment {
             GIT_REPO_NAME = "cicd-end-to-end"
             GIT_USER_NAME = "ramesh2617"
-        }
+             }
         steps {
             withCredentials([string(credentialsId: '50456577-9339-4b4d-9dc5-0767f2936197', variable: 'GITHUB_TOKEN')]) {
                         sh '''
