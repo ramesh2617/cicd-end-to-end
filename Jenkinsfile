@@ -16,24 +16,22 @@ pipeline {
 
         stage('Build Docker'){
             steps{
-                script{
-                   #!/bin/sh
+               
                     echo 'Buid Docker Image'
                     docker build -t mahiramesh2617/myargo:${BUILD_NUMBER} .
-                    '''
-                }
+                
+                
             }
         }
 
         stage('Push the artifacts'){
            steps{
-                script{
-                    sh '''
-                    echo 'Push to Repo'
+               
+                   
                     docker login -u mahiramesh2617 -p Mahi@2617
                     docker push mahiramesh2617/myargo:${BUILD_NUMBER}
                     
-                    '''
+                    
                 }
             }
         }
