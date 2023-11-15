@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker'){
             steps{
                 script{
-                    sh '''
+                   #!/bin/sh
                     echo 'Buid Docker Image'
                     docker build -t mahiramesh2617/myargo:${BUILD_NUMBER} .
                     '''
