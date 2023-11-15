@@ -10,7 +10,7 @@ pipeline {
         
         stage('Checkout'){
            steps {
-                git credentialsId: '3717e5e0-d3d1-47a2-8dd3-72b98ec840d6', 
+                git credentialsId: 'd2857801-24ec-4bb5-9012-33edad66680a', 
                 url: 'https://github.com/ramesh2617/cicd-end-to-end.git',
                 branch: 'main'
            }
@@ -42,7 +42,7 @@ pipeline {
         
         stage('Checkout K8S manifest SCM'){
             steps {
-                git credentialsId: '3717e5e0-d3d1-47a2-8dd3-72b98ec840d6', 
+                git credentialsId: 'd2857801-24ec-4bb5-9012-33edad66680a', 
                 url: 'https://github.com/ramesh2617/cicd-end-to-end.git',
                 branch: 'main'
             }
@@ -55,7 +55,7 @@ pipeline {
             GITHUB_TOKEN = "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"
              }
         steps {
-            withCredentials([string(credentialsId: '3717e5e0-d3d1-47a2-8dd3-72b98ec840d6', variable: 'GITHUB_TOKEN')]) {
+            withCredentials([string(credentialsId: 'd2857801-24ec-4bb5-9012-33edad66680a', variable: 'GITHUB_TOKEN')]) {
                         sh '''
                         git config user.email "krameshchennai3456@gmail.com"
                         git config user.name "ramesh1"
