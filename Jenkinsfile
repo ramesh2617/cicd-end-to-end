@@ -16,24 +16,16 @@ pipeline {
 
         stage('Build Docker'){
             steps{
-               
-                    echo 'Buid Docker Image'
-                    docker build -t mahiramesh2617/myargo:${BUILD_NUMBER} .
-                
-                
+                 docker build -t mahiramesh2617/myargo:${BUILD_NUMBER} .     
             }
         }
 
         stage('Push the artifacts'){
            steps{
-               
-                   
                     docker login -u mahiramesh2617 -p Mahi@2617
-                    docker push mahiramesh2617/myargo:${BUILD_NUMBER}
-                    
-                    
+                    docker push mahiramesh2617/myargo:${BUILD_NUMBER}       
                 
-            }
+               }
         }
         
         stage('Checkout K8S manifest SCM'){
