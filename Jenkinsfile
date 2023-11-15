@@ -32,7 +32,7 @@ pipeline {
                     docker push mahiramesh2617/myargo:${BUILD_NUMBER}
                     
                     
-                }
+                
             }
         }
         
